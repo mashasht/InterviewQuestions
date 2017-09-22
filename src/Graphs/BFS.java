@@ -3,6 +3,12 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class BFS {
+	/**
+	 * Only for trees case
+	 * @param graph
+	 * @param start
+	 * @return
+	 */
 	public static List<Vertex> bfsTraversal(Graph graph, Vertex start){
 		List<Vertex> visitedVertices = new LinkedList<>();
 		List<Vertex> unvisitedVertices = new LinkedList<>();
