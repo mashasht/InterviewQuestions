@@ -4,11 +4,16 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 public class Graph {
 	int edgeCount;
 	int verticesCount;
 	Map<Vertex, List<Vertex>> adjacencyList = new HashMap<>();
+	
+	public Set<Vertex> getAllVertices(){
+		return adjacencyList.keySet();
+	}
 	
 	public List<Vertex> getAdjacentVertices(Vertex v){
 		return adjacencyList.get(v);

@@ -21,9 +21,9 @@ public class BFS {
 		return visitedVertices;
 	}
 	public static void main(String[] args) {
-		Vertex one = new Vertex("one");
-		Vertex two = new Vertex("two");
-		Vertex three = new Vertex("three");
+		Vertex one = new Vertex(1);
+		Vertex two = new Vertex(2);
+		Vertex three = new Vertex(3);
 		Graph graph = new Graph();
 		graph.addVertex(one);
 		graph.addVertex(two);

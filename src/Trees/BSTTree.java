@@ -1,6 +1,8 @@
 package Trees;
 
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class BSTTree {
 	BSTNode root;
@@ -22,5 +24,15 @@ public class BSTTree {
 		if (root != null) {
 			root.buildPreorderList(nodes);
 		}
+	}
+	public boolean isBalanced() {
+		Set<Integer> heights = new HashSet<>();
+		root.returnHeights(heights, 0);
+		if (heights.isEmpty()) {
+			return true;
+		}
+		return (heights.size() <= 2 && 
+				(heights.stream().max(Integer::compare).get() - 
+						heights.stream().min(Integer::compare).get() < 2));
 	}
 }

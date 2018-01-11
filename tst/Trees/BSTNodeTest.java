@@ -19,9 +19,6 @@ public class BSTNodeTest {
 		List<BSTNode> nodes = new LinkedList<>();
 		tree.buildPreorderList(nodes);
 		System.out.println(nodes);
-		tree.delete(8);
-		nodes = new LinkedList<>();
-		tree.buildPreorderList(nodes);
-		System.out.println(nodes);
+		System.out.println(tree.isBalanced());
 	}
 }

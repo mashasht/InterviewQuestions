@@ -1,6 +1,7 @@
 package Trees;
 
 import java.util.List;
+import java.util.Set;
 
 public class BSTNode {
 	BSTNode left;
@@ -106,4 +107,16 @@ public class BSTNode {
 			right.delete(data);
 		}
 	}	
+	public void returnHeights(Set<Integer> heights, int heightSoFar) {
+		heightSoFar++;
+		if (this.left == null || this.right == null) {
+			heights.add(heightSoFar);
+		}
+		if (this.left != null) {
+			this.left.returnHeights(heights, heightSoFar);
+		}
+		if (this.right != null) {
+			this.right.returnHeights(heights, heightSoFar);
+		}
+	}
 }

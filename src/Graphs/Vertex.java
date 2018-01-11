@@ -1,15 +1,19 @@
 package Graphs;
 
 public class Vertex {
-	private String name;
-	public Vertex(String name) {
-		this.name = name;
+	enum Color{
+		WHITE, GREY, BLACK;
 	}
-	public String getName() {
-		return this.name;
+	
+	private int value;
+	public Vertex(int value) {
+		this.value = value;
+	}
+	public int getValue() {
+		return this.value;
 	}
 	public String toString() {
-		return this.name;
+		return Integer.toString(this.value);
 	}
 
 }
