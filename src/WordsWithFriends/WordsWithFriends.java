@@ -46,11 +46,10 @@ public class WordsWithFriends {
 			WordPrefix current = stackPrefices.peek();
 			visited[current.coordinate.first][current.coordinate.second] = true;	
 			Set<Coordinate> unvisitedCoordinates = getUnvisited(current.coordinate.first, current.coordinate.second, visited);
+			stackPrefices.pop();
 			if (unvisitedCoordinates.isEmpty()) {
-				stackPrefices.pop();
 				continue;
 			}
-			stackPrefices.pop();
 			for (Coordinate unvisitedCoordinate : unvisitedCoordinates) {
 				String newWord = current.prefix + letters[unvisitedCoordinate.first][unvisitedCoordinate.second];
 				if (dict.isWord(newWord)) {
