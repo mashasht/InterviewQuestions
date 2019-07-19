@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Set;
 
 
-public class DFS {
+/*public class DFS {
 	enum Color{
 		WHITE, GREY, BLACK;
 	}
@@ -18,7 +18,7 @@ public class DFS {
 			this.color = color;
 		}
 	}
-	public static Set<List<Vertex>> sort(Graph g){
+	public Set<List<Vertex>> sort(Graph g){
 		Set<Vertex> vertices = g.getAllVertices();
 		Set<DFSVertex> dfsVertices = new HashSet<>();
 		Set<List<Vertex>> dfsForest = new HashSet<>();
@@ -46,4 +46,4 @@ public class DFS {
 		}
 	}
 
-}
+}*/
