@@ -38,7 +38,7 @@ public class LetterCombinations {
         }
         return result;
     }
-    public static void main(String[] args){
+    public static void main(String[] args) {
         LetterCombinations letterCombinations = new LetterCombinations();
         System.out.println(letterCombinations.letterCombinations("23"));
     }
